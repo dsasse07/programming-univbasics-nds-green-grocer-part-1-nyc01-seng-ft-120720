@@ -15,12 +15,13 @@ def consolidate_cart(cart)
   # REMEMBER: This returns a new Array that represents the cart. Don't merely
   # change `cart` (i.e. mutate) it. It's easier to return a new thing.
   
-  binding.pry
-  consolidated_cart = cart.uniq 
 
+  consolidated_cart = cart.uniq
   consolidated_cart.each do |item_entry|
     item_entry.store(:count, 1)
   end 
+  
+  
   binding.pry
       
   
