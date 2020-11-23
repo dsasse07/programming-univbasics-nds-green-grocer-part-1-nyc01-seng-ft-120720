@@ -17,7 +17,12 @@ def consolidate_cart(cart)
   
   consolidated_cart = []
   cart.each do |cart_item|
-    if consolidated_cart.includes? (cart_item[:item])
-
+    if consolidated_cart.include? (cart_item[:item])
+      cart_item[:count] += 1 
+    else
+      cart_item[:count] = 1 
+      consolidated_cart << cart_item
+    end
+    consolidated_cart
 end
 
