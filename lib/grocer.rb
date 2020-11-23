@@ -19,6 +19,7 @@ def consolidate_cart(cart)
   index = 0 
   while index < consolidated_cart.length do 
     consolidated_cart[0][:count] = 1 
+    index += 1
   end 
   binding.pry
       
