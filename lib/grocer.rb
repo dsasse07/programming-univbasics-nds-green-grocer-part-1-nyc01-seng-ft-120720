@@ -1,8 +1,12 @@
+require 'pry'
 def find_item_by_name_in_collection(name, collection)
-  # Implement me first!
-  #
-  # Consult README for inputs and outputs
-
+  item_found=nil
+  collection.each do |item_entry|
+    if item_entry[:item] == name
+      return item_found = item_entry
+    end
+  end
+  return item_found
 end
 
 def consolidate_cart(cart)
@@ -13,5 +17,3 @@ def consolidate_cart(cart)
 
 end
 
-
-  
