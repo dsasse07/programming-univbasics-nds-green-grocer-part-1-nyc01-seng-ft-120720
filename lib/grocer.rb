@@ -16,12 +16,7 @@ def consolidate_cart(cart)
   # change `cart` (i.e. mutate) it. It's easier to return a new thing.
   
   consolidated_cart = cart.uniq 
-  # index = 0 
-  # while index < consolidated_cart.length do 
-  #   consolidated_cart[index][:count] = 1 
-  #   index += 1
-  # end 
-  
+
   consolidated_cart.each do |item_entry|
     item_entry.store(:count, 1)
   end 
