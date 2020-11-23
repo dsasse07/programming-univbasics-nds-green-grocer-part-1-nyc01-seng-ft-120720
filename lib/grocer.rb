@@ -17,15 +17,11 @@ def consolidate_cart(cart)
   
 
   consolidated_cart = cart.uniq
-  # consolidated_cart.each do |item_entry|
-  #   item_entry.store(:count, 1)
-  # end 
-  
   consolidated_cart.each do |item_entry|
     item_count = cart.count(item_entry)
-   item_entry.store(:count, item_count)
- end
-  
+    item_entry.store(:count, item_count)
+  end
+  consolidated_cart
   binding.pry
       
   
