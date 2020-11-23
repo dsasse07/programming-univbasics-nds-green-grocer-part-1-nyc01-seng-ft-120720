@@ -15,7 +15,9 @@ def consolidate_cart(cart)
   # REMEMBER: This returns a new Array that represents the cart. Don't merely
   # change `cart` (i.e. mutate) it. It's easier to return a new thing.
   
-  consolidated_cart = cart.uniq
+  consolidated_cart = cart.uniq 
+  consolidated_cart.each do |item|
+    consolidated_cart
   cart.each do |cart_item|
     
     if consolidated_cart.has_value? (cart_item[:item])
