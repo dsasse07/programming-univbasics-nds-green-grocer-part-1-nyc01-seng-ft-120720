@@ -15,22 +15,18 @@ def consolidate_cart(cart)
   # REMEMBER: This returns a new Array that represents the cart. Don't merely
   # change `cart` (i.e. mutate) it. It's easier to return a new thing.
   
-  consolidated_cart = cart.uniq
-  index = 0 
-  # while index < cart.length
-  #   cart.each do |cart_item|
-      
-  #     if consolidated_cart[index].include? (cart_item[:item])
-  #       item_location = consolidated_cart.index(cart_item)
-  #       consolidated_cart[item_location][:count] += 1
-  #     else
-  #       cart_item[:count] = 1 
-  #       consolidated_cart << cart_item
-  #     end
-  #   end
-  #   index += 1 
-  # end 
-    binding.pry
+  consolidated_cart = []
+  cart.each do |cart_item|
+    
+    if consolidated_cart.has_value? (cart_item[:item])
+      item_location = consolidated_cart.index(cart_item)
+      consolidated_cart[item_location][:count] += 1
+    else
+      cart_item[:count] = 1 
+      consolidated_cart << cart_item
+    end
+  end
+    # binding.pry
     consolidated_cart
 end
 
