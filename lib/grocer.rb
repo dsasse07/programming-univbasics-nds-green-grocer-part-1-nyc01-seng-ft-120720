@@ -21,6 +21,5 @@ def consolidate_cart(cart)
     item_entry.store(:count, item_count)
   end
   consolidated_cart
-  
 end
 
