@@ -18,16 +18,16 @@ def consolidate_cart(cart)
   consolidated_cart = []
   index = 0 
   while index < cart.length
-  cart.each do |cart_item|
-    
-    if consolidated_cart[index].include? (cart_item[:item])
-      item_location = consolidated_cart.index(cart_item)
-      consolidated_cart[item_location][:count] += 1
-    else
-      cart_item[:count] = 1 
-      consolidated_cart << cart_item
+    cart.each do |cart_item|
+      
+      if consolidated_cart[index].include? (cart_item[:item])
+        item_location = consolidated_cart.index(cart_item)
+        consolidated_cart[item_location][:count] += 1
+      else
+        cart_item[:count] = 1 
+        consolidated_cart << cart_item
+      end
     end
-  end
   index += 1 
 end 
     binding.pry
