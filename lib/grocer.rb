@@ -28,8 +28,8 @@ def consolidate_cart(cart)
         consolidated_cart << cart_item
       end
     end
-  index += 1 
-end 
+    index += 1 
+  end 
     binding.pry
     consolidated_cart
 end
