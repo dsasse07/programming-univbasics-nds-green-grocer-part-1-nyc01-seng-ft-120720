@@ -17,14 +17,15 @@ def consolidate_cart(cart)
   
   consolidated_cart = []
   cart.each do |cart_item|
-    
-    if consolidated_cart.has_value? (cart_item[:item])
+    i=0 
+    if consolidated_cart[i].has_value? (cart_item[:item])
       item_location = consolidated_cart.index(cart_item)
       consolidated_cart[item_location][:count] += 1
     else
       cart_item[:count] = 1 
       consolidated_cart << cart_item
     end
+    i += 1
   end
     binding.pry
     consolidated_cart
