@@ -16,9 +16,11 @@ def consolidate_cart(cart)
   # change `cart` (i.e. mutate) it. It's easier to return a new thing.
   
   consolidated_cart = []
+  index = 0 
+  while index < cart.length
   cart.each do |cart_item|
     
-    if consolidated_cart.include? (cart_item[:item])
+    if consolidated_cart[index].include? (cart_item[:item])
       item_location = consolidated_cart.index(cart_item)
       consolidated_cart[item_location][:count] += 1
     else
@@ -26,6 +28,8 @@ def consolidate_cart(cart)
       consolidated_cart << cart_item
     end
   end
+  index += 1 
+end 
     binding.pry
     consolidated_cart
 end
