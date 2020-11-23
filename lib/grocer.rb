@@ -3,7 +3,7 @@ def find_item_by_name_in_collection(name, collection)
   item_found=nil
   collection.each do |item_entry|
     if item_entry[:item] == name
-      return item_found = item_entry
+      item_found = item_entry
     end
   end
   item_found
