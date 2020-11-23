@@ -18,7 +18,7 @@ def consolidate_cart(cart)
   consolidated_cart = cart.uniq 
   index = 0 
   while index < consolidated_cart.length do 
-    consolidated_cart[0][:count] = 1 
+    consolidated_cart[index][:count] = 1 
     index += 1
   end 
   binding.pry
