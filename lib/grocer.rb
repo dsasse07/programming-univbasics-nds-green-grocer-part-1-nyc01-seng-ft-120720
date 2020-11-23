@@ -20,8 +20,7 @@ def consolidate_cart(cart)
     
     if consolidated_cart.include? (cart_item[:item])
       item_location = consolidated_cart.index(cart_item)
-      consolidated_cart[item_location][:count
-      cart_item[:count] += 1 
+      consolidated_cart[item_location][:count] += 1
     else
       cart_item[:count] = 1 
       consolidated_cart << cart_item
