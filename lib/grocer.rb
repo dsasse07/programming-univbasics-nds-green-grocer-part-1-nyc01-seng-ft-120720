@@ -23,7 +23,7 @@ def consolidate_cart(cart)
   # end 
   
   consolidated_cart.each do |item_entry|
-    item_entry.store(count: 1)
+    item_entry.store(:count => 1)
   end 
   binding.pry
       
